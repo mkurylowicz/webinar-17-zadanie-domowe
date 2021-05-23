@@ -1,1 +1,1 @@
-# webinar-17-zadanie-domowe
+# webinar-17g-zadanie-domowe
