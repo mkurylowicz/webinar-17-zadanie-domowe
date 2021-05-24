@@ -64,12 +64,15 @@ public class AlertsTests extends BaseTest{
         driver.switchTo().alert().accept();
         WebElement confirmationElement = driver.findElement(By.cssSelector("p#result"));
         String confirmationText = confirmationElement.getText();
+
         Assert.assertEquals(confirmationText, "You entered: Hello it's me :-)");
+
         jsPromptButton.click();
         driver.switchTo().alert().sendKeys("Hello It's me again ;-)");
         driver.switchTo().alert().dismiss();
         confirmationElement = driver.findElement(By.cssSelector("p#result"));
         confirmationText = confirmationElement.getText();
+
         Assert.assertEquals(confirmationText, "You entered: null");
     }
 
